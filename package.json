@@ -9,16 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babylonjs/core": "^8.15.1",
+    "@babylonjs/gui": "^8.15.1",
+    "@babylonjs/loaders": "^8.15.1",
+    "@babylonjs/materials": "^8.15.1",
+    "@babylonjs/procedural-textures": "^8.15.1",
+    "@types/stats.js": "^0.17.4",
+    "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "stats.js": "^0.17.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

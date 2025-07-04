@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 Baby Splat
 
-## Getting Started
+> A **very simple** Babylon.js Gaussian Splatting renderer that just works! ✨
 
-First, run the development server:
+## 🚀 Quick Start
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Getting up and running is stupidly easy:
+
+1. **Drop your file** 📁  
+   Simply put your `input.splat` into the `public/` folder
+
+2. **Install dependencies** 📦
+
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
+
+3. **Fire it up** 🔥
+
+   ```bash
+   yarn dev
+   # or
+   npm run dev
+   ```
+
+4. **Open and enjoy** 🎉  
+   Head over to [http://localhost:3000](http://localhost:3000) in your browser
+
+See? **As simple as it is!**
+
+> 💡 **Pro tip:** You might need to edit the rotation of the splat though 😉
+
+---
+
+## 📋 For the Boring People
+
+_Because some folks need the full technical breakdown..._
+
+### 🛠️ Tech Stack
+
+- **Framework:** Next.js 14+ (App Router)
+- **3D Engine:** Babylon.js
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Package Manager:** npm/yarn
+
+### 📋 Prerequisites
+
+- **Node.js** (v18.0.0 or higher)
+- **npm** or **yarn**
+- A modern browser with WebGL support
+- Your favorite `.splat` file
+
+### 📁 Project Structure
+
+```
+baby-splat/
+├── public/
+│   └── input.splat          # Your Gaussian splat file goes here
+├── src/
+│   ├── app/
+│   │   ├── page.tsx         # Main landing page
+│   │   └── gaussian/        # Gaussian splatting demo
+│   └── components/
+│       └── GaussianSplattingScene.tsx
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🎛️ Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Gaussian splat renderer loads from `public/input.splat` by default. If you need to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Change the file path:** Edit the file reference in `GaussianSplattingScene.tsx`
+- **Adjust rotation/position:** Modify the transform properties in the scene component
+- **Tweak performance:** Adjust the rendering settings in Babylon.js configuration
 
-## Learn More
+### 🐛 Troubleshooting
 
-To learn more about Next.js, take a look at the following resources:
+**Scene not loading?**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Check browser console for errors
+- Ensure your `.splat` file is valid
+- Verify WebGL is enabled in your browser
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Performance issues?**
 
-## Deploy on Vercel
+- Try a smaller `.splat` file
+- Close other browser tabs
+- Check your GPU drivers are up to date
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Found a bug? Want to add features? PRs welcome! Just keep it simple and fun.
+
+### 📄 License
+
+do whatever you want with this code! 🎉
