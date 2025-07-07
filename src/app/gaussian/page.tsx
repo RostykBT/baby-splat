@@ -32,14 +32,14 @@ const GaussianPage = () => {
             engineRef.current = engine;
 
             // Initialize Stats.js
-            // const stats = new Stats();
-            // stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
-            // stats.dom.style.position = 'absolute';
-            // stats.dom.style.left = '0px';
-            // stats.dom.style.top = '0px';
-            // stats.dom.style.zIndex = '100';
-            // document.body.appendChild(stats.dom);
-            // statsRef.current = stats;
+            const stats = new Stats();
+            stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
+            stats.dom.style.position = 'absolute';
+            stats.dom.style.left = '0px';
+            stats.dom.style.top = '0px';
+            stats.dom.style.zIndex = '100';
+            document.body.appendChild(stats.dom);
+            statsRef.current = stats;
 
             // This creates a basic Babylon Scene object (non-mesh)
             const scene = new Scene(engine);
@@ -53,10 +53,10 @@ const GaussianPage = () => {
             camera.attachControl(canvas, true);
 
             // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
-            const light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
+            // const light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
 
             // Default intensity is 1. Let's dim the light a small amount
-            light.intensity = 0.7;
+            // light.intensity = 0.7;
 
             // Our built-in 'sphere' shape.
             const sphere = MeshBuilder.CreateSphere("sphere", { diameter: 1, segments: 32 }, scene);
@@ -100,9 +100,9 @@ const GaussianPage = () => {
 
             // Start render loop
             engine.runRenderLoop(() => {
-                // stats.begin();
+                stats.begin();
                 scene.render();
-                // stats.end();
+                stats.end();
             });
 
             return scene;
